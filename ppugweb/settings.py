@@ -81,16 +81,21 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'ppugweb.urls'
 
+# see skins/*
+PPUGWEB_SKIN = "default"
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(os.path.dirname(__file__), 'skins', PPUGWEB_SKIN),
 )
 
+# TODO: configure your webserver to point to the absolute directory of zinnia/media
 ZINNIA_MEDIA_URL = "/zinnia/"
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.auth',
+    'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.i18n',
     'django.core.context_processors.request',
     'django.core.context_processors.media',

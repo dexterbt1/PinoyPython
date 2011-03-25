@@ -1,6 +1,7 @@
 *.pyc
 *.db
 *.sw[po]
+work.vim
 pip-log.txt
 ppugweb/bin/
 ppugweb/build/
