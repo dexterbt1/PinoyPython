@@ -2,3 +2,8 @@
 *.db
 *.sw[po]
 pip-log.txt
+ppugweb/bin/
+ppugweb/build/
+ppugweb/include/
+ppugweb/lib/
+
