@@ -1,5 +1,6 @@
 # Django settings for ppugweb project.
 import os
+import zinnia
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -74,6 +75,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.doc.XViewMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
@@ -84,6 +86,8 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+
+ZINNIA_MEDIA_URL = "/zinnia/"
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.auth',

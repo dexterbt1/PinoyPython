@@ -3,6 +3,7 @@ import os
 from django.contrib import admin
 from django.conf.urls.defaults import *
 from zinnia.sitemaps import TagSitemap, EntrySitemap, CategorySitemap, AuthorSitemap
+import zinnia
 
 admin.autodiscover()
 
@@ -31,6 +32,5 @@ urlpatterns += patterns('django.contrib.sitemaps.views',
 
 urlpatterns += patterns('django.views.static',
                         url(r'^zinnia/(?P<path>.*)$', 'serve',
-                            {'document_root': os.path.join(os.path.dirname(__file__),
-                                                           '..', 'zinnia', 'media', 'zinnia')}),
+                            {'document_root': os.path.join(os.path.dirname(zinnia.__file__), 'media', 'zinnia')}),
                         )
