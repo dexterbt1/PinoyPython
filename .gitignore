@@ -1,2 +1,4 @@
 *.pyc
 *.db
+*.sw[po]
+pip-log.txt
