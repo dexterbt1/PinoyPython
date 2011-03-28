@@ -2,84 +2,90 @@
 {% tags_for_model zinnia.entry as tag_entry %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv="cache-control" content="public" />
-    <meta name="robots" content="follow, all" />
-    <meta name="language" content="{{ LANGUAGE_CODE }}" />
-    <meta name="description" content="{% block meta-description %}Demonstration of the Zinnia Blog application.{% endblock %}" />
-    <meta name="keywords" content="django, blog, zinnia, {{ tag_entry|join:", "}}, {% block meta-keywords %}{% endblock %}" />
-    <meta name="author" content="Fantomas42" />
-    <meta name="engine" content="Zinnia {{ ZINNIA_VERSION }}" />
-    {% block meta %}{% endblock %}
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="home" href="{% url zinnia_entry_archive_index %}" />
-    <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ ZINNIA_MEDIA_URL }}css/screen.css" />
-    <link rel="stylesheet" type="text/css" media="print" href="{{ ZINNIA_MEDIA_URL }}css/print.css" />
-    <!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" media="screen, projection" href="{{ ZINNIA_MEDIA_URL }}css/ie.css" />
-    <![endif]-->
-    {% get_archives_entries "zinnia/tags/archives_entries_link.html" %}
-    <link rel="pingback" href="/xmlrpc/" />
-    <link rel="EditURI" type="application/rsd+xml" href="{% url zinnia_rsd %}" />
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% url zinnia_wlwmanifest %}" />
-    <link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of latest entries" %}" href="{% url zinnia_entry_latest_feed %}" />
-    {% block link %}{% endblock %}
-    {% block script %}{% endblock %}
-    <title>Pinoy Python Users Group - {% block title %}{% endblock %}</title>
-  </head>
-  <body id="zinnia">
-    <div class="container">
-      <div id="header" class="span-24 last">
-	<div class="top-navigation">
-	  <a href="{% url zinnia_sitemap %}" title="{% trans "Sitemap" %}" class="link sitemap">
-	    {% trans "Sitemap" %}
-	  </a> |
-	  <a href="{% url zinnia_entry_latest_feed %}" title="{% trans "RSS Feed of latest entries" %}" class="link feeds">
-	    {% trans "RSS Feed" %}
-	  </a>
-	</div>
-	<h1>
-	  <a href="{% url zinnia_entry_archive_index %}" title="Pinoy Python Users Group" rel="home">
-	    Pinoy Python Users Group
-	  </a>
-	</h1>
-    <!--
-	<blockquote>
-	  <p>Just another Zinnia weblog.</p>
-	</blockquote>
-    -->
-	<div id="breadcrumbs" class="span-24 last">
-	  / {% block breadcrumbs %}{% endblock %}
-	</div>
-      </div>
-      <hr />
-      <div id="body" class="span-24 last">
-	<div id="content" class="hfeed span-16 border">
-	  {% block content %}
-	  <h3>The content block need to be overrided!</h3>
-	  {% endblock %}
-	</div>
-	<div id="sidebar" class="span-8 last">
-	  <div class="welcome">
-	    <h3>Welcome!</h3>
-	    <p>
-	      This simple skin is the base template of the Zinnia application,
-	      used for displaying the blog quickly.
-	      <br />
-	      Feel free to override the <em>zinnia/base.html</em> template to change the appearence.
-	    </p>
-	  </div>
-	  {% block sidebar %}
-	  {% endblock %}
-	</div>
-      </div>
-      <hr />
-      <div id="footer" class="span-24 last">
-	<p>Powered by <a href="http://www.djangoproject.com">Django</a> and <a href="http://github.com/Fantomas42/django-blog-zinnia">Zinnia {{ ZINNIA_VERSION }}</a>.</p>
-      </div>
-    </div>
-  </body>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="cache-control" content="public" />
+        <meta name="robots" content="follow, all" />
+        <meta name="language" content="{{ LANGUAGE_CODE }}" />
+        <meta name="description" content="{% block meta-description %}Demonstration of the Zinnia Blog application.{% endblock %}" />
+        <meta name="keywords" content="django, blog, zinnia, {{ tag_entry|join:", "}}, {% block meta-keywords %}{% endblock %}" />
+        <meta name="author" content="Fantomas42" />
+        <meta name="engine" content="Zinnia {{ ZINNIA_VERSION }}" />
+        {% block meta %}{% endblock %}
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="home" href="{% url zinnia_entry_archive_index %}" />
+        {% comment %}
+        <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ ZINNIA_MEDIA_URL }}css/screen.css" />
+        {% endcomment %}
+        <link rel="stylesheet" type="text/css" media="screen, projection" href="/skin-media/css/960gs-12.css" />
+        <link rel="stylesheet" type="text/css" media="screen, projection" href="/skin-media/css/screen.css" />
+        <link rel="stylesheet" type="text/css" media="print" href="{{ ZINNIA_MEDIA_URL }}css/print.css" />
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ ZINNIA_MEDIA_URL }}css/ie.css" />
+        <![endif]-->
+        {% get_archives_entries "zinnia/tags/archives_entries_link.html" %}
+        <link rel="pingback" href="/xmlrpc/" />
+        <link rel="EditURI" type="application/rsd+xml" href="{% url zinnia_rsd %}" />
+        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% url zinnia_wlwmanifest %}" />
+        <link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed of latest entries" %}" href="{% url zinnia_entry_latest_feed %}" />
+        {% block link %}{% endblock %}
+        {% block script %}{% endblock %}
+        <title>Pinoy Python Users Group - {% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div id="page" class="container_12">
+            <div id="header" class="grid_12">
+                <div id="header-brand" class="grid_6">
+                    <a href="/" title="Pinoy Python Users Group" rel="home">
+                        <img src="/skin-media/logo.gif" title="Pinoy Python Users Group" />
+                    </a>
+                    <blockquote>
+                        <!-- <p>Python Enthusiasts in the Philippines</p> -->
+                    </blockquote>
+                </div>
+                <div class="topnav grid_5">
+                    <!--
+                    <a href="{% url zinnia_sitemap %}" title="{% trans "Sitemap" %}" class="link sitemap">
+                    {% trans "Sitemap" %}
+                    </a> |
+                    <a href="{% url zinnia_entry_latest_feed %}" title="{% trans "RSS Feed of latest entries" %}" class="link feeds">
+                    {% trans "RSS Feed" %}
+                    </a>
+                    -->
+                    <ul>
+                        <li><a class="selected" href="{% url zinnia_entry_archive_index %}" title="Blog"   >Blog</a></li>
+                        <li><a class="" href="#" title="Wiki"       >Wiki</a></li>
+                        <li><a class="" href="#" title="Sponsors"   >Sponsors</a></li>
+                        <li><a class="" href="#" title="About"      >About</a></li>
+                    </ul>
+                </div>
+
+                <div class="clear"></div>
+
+                <div id="breadcrumbs" class="grid_12">
+                    {% block breadcrumbs %}{% endblock %}
+                </div>
+            </div>
+
+            <div id="body" class="last">
+                <div id="content" class="grid_8">
+                    {% block content %}
+                    <h3>The content block need to be overrided!</h3>
+                    {% endblock %}
+                </div>
+                <div id="sidebar" class="grid_4">
+                {% block sidebar %}
+                {% endblock %}
+                </div>
+            </div>
+
+            <div id="footer" class="grid_12">
+                <p>Powered by <a href="http://www.djangoproject.com">Django</a> and <a href="http://github.com/Fantomas42/django-blog-zinnia">Zinnia</a>.</p>
+            </div>
+
+        </div>
+        <a href="http://github.com/dexterbt1/PinoyPython"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+    </body>
 </html>
 
 

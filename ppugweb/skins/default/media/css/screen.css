@@ -1,0 +1,86 @@
+* { margin: 0; padding: 0; }
+
+body { font-family: "Lucida Grande", "Arial", sans-serif; }
+
+ul { list-style-position: inside; margin: 10px 20px; list-style-type: square; }
+
+h1, h2, h3, h4, h5 { padding: 10px 0 0;  }
+
+a, a:visited { color: #b50; text-decoration: none; }
+
+a:hover { color: #e80; text-decoration: underline; }
+
+hr { background: #dddddd; color: #dddddd; clear: both; float: none; width: 100%; height: 0.1em; margin: 0 0 1.45em; border: none; }
+
+fieldset { padding: 20px; border: 1px solid #ddd; margin: 30px 0 50px; }
+
+legend { font-size: 1.20em; font-weight: bold; margin-left: 0 }
+
+input[type="text"] { padding: 6px; border: 1px solid #ddd; }
+
+input.submitbutton { padding: 5px 18px; }
+
+.entry-title { text-shadow: 1px 1px 2px #ddd; }
+
+.entry-info { margin: 0px 0 10px; }
+
+.entry-content { font-family: "PT Serif", "Georgia", serif; margin-left: 0px; color: #444; font-size: 1em; }
+
+.entry-content p { padding: 10px 0; }
+
+.entry-content pre { padding: 10px 0; color: #000; }
+
+.entry-footer { margin-top: 20px; background-color: #f3f3ee; padding: 20px; font-size: 0.95em; }
+
+
+#header { margin-left: 0; }
+
+#header-brand { margin-left: 0; padding: 10px 0 0; }
+
+#header-brand blockquote { margin-left: 80px; font-size: 0.8em; }
+
+body { border-top: 5px solid #c60; }
+
+.topnav { float: right; } 
+
+.topnav ul { list-style: none;}
+
+.topnav ul li { float: left; }
+
+.topnav ul li a { padding: 10px 15px 20px 12px; border-left: 1px dotted #dda; border-right: 1px solid #fff; font-weight: bold; color: #000; }
+
+.topnav ul li a:hover { text-decoration: none; }
+
+.topnav ul li a.selected { border: 1px solid #c60; border-bottom: 1px solid #777; border-right: 1px solid #777;  color: #fff; background-color: #c60; text-shadow: -1px -1px 1px #555;  }
+
+.topnav ul li a:hover { border: 1px solid #c60; border-left: 1px solid #f97; border-bottom: 1px solid #777; border-right: 1px solid #777; color: #fff; background-color: #c60; text-shadow: -1px -1px 1px #555;  }
+
+
+#breadcrumbs { margin: 10px 0 0; padding: 10px; background-color: #776; color: #fff; text-shadow: 1px 1px -1px #222; font-size: 1.05em; }
+
+#breadcrumbs a { color: #fb0; }
+
+#breadcrumbs a:visited { color: #fb0; }
+
+
+#content { margin-left: 0; }
+
+
+#searchbox { border: 1px solid #ddd; padding 5px; margin-bottom: 20px; }
+
+
+#categories { margin-bottom: 30px; }
+
+
+#recents { margin-bottom: 30px; }
+
+
+#comments ol { list-style-position: inside; margin: 10px 20px;  }
+
+#comments ol li { display: inline; }
+
+#comments cite { font-size: 0.8em; font-style: normal; }
+
+
+#footer { margin-left: 0; padding: 50px 0; }
+

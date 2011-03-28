@@ -2,6 +2,7 @@ import os
 
 from django.contrib import admin
 from django.conf.urls.defaults import *
+from django.conf import settings
 from zinnia.sitemaps import TagSitemap, EntrySitemap, CategorySitemap, AuthorSitemap
 import zinnia
 
@@ -30,7 +31,16 @@ urlpatterns += patterns('django.contrib.sitemaps.views',
                          {'sitemaps': sitemaps}),
                         )
 
+# URLs to static media
+# comment these when in production and should be aliased at the webserver
+# see settings.py
+#       ZINNIA_MEDIA_URL
+#       PPUGWEB_MEDIA_URL
 urlpatterns += patterns('django.views.static',
                         url(r'^zinnia/(?P<path>.*)$', 'serve',
                             {'document_root': os.path.join(os.path.dirname(zinnia.__file__), 'media', 'zinnia')}),
+                        url(r'^uploads/(?P<path>.*)$', 'serve',
+                            {'document_root': os.path.join(os.path.dirname(__file__), 'uploads')}),
+                        url(r'^skin-media/(?P<path>.*)$', 'serve',
+                            {'document_root': os.path.join(os.path.dirname(__file__), 'skins', settings.PPUGWEB_SKIN, 'media')}),
                         )
