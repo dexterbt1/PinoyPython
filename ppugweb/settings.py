@@ -122,5 +122,5 @@ INSTALLED_APPS = (
     'tagging',
     'django_xmlrpc',
     # custom
-	'blog',
+	## 'blog', # zinnia is used for now ...
 )

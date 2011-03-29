@@ -18,7 +18,7 @@ legend { font-size: 1.20em; font-weight: bold; margin-left: 0 }
 
 input[type="text"] { padding: 6px; border: 1px solid #ddd; }
 
-input.submitbutton { padding: 5px 18px; }
+input[type="submit"] { padding: 5px 18px; }
 
 .entry-title { text-shadow: 1px 1px 2px #ddd; }
 
@@ -86,7 +86,7 @@ body { border-top: 5px solid #c60; }
 
 .categories ul li { font-size: 0.8em; }
 
-.categories ul li a { padding-right: 10px; font-size: 1.2em; }
+.categories ul li a { padding-right: 10px; font-size: 1.25em; }
 
 
 #recents { margin-bottom: 30px; }

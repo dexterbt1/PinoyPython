@@ -5,12 +5,13 @@ Dependencies
 ------------
 
 - python >= 2.6
+- python header files
 - pip
 - virtualenv
 - header files for: (check with your OS package manager)
-    - zlib
     - libjpeg
     - libpng
+    - libfreetype
 
 
 Quick Setup
